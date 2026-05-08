@@ -1,254 +1,3 @@
-
-Robotics
-/
-Claude finished the response
-You said: hi.
-hi. i need to host my site on github. can you please help me figure out the steps to do that
-
-4:44 PM
-Claude responded: Happy to help!
-Happy to help! Here's how to host your site on GitHub Pages:
-
-1. Create a GitHub account If you don't have one, sign up at github.com.
-
-2. Create a new repository
-
-Click the + icon → "New repository"
-Name it yourusername.github.io (replace with your actual GitHub username) — this is important for the URL to work correctly
-Set it to Public
-Click "Create repository"
-3. Upload your site files You have two options:
-
-Via the browser (easiest): Open your new repo, click "Add file" → "Upload files", and drag in your HTML/CSS/JS files. Make sure your homepage is named index.html.
-Via Git (recommended for ongoing updates):
-bash
-  git init
-  git add .
-  git commit -m "Initial commit"
-  git branch -M main
-  git remote add origin https://github.com/yourusername/yourusername.github.io.git
-  git push -u origin main
-4. Enable GitHub Pages
-
-Go to your repo → Settings → Pages (in the left sidebar)
-Under "Source", select the main branch and click Save
-5. Visit your site After a minute or two, your site will be live at: https://yourusername.github.io
-
-A few tips:
-
-Changes can take 1–2 minutes to go live after pushing
-If your repo is named anything other than yourusername.github.io, your site URL will be https://yourusername.github.io/repo-name instead
-You can also connect a custom domain (like yoursite.com) in the Pages settings if you have one
-Do you already have a GitHub account, or are you starting from scratch? And are your site files ready to upload?
-
-You said: wait so what will the username be if i name the repo: catbot-ciangy@github.
-wait so what will the username be if i name the repo: catbot-ciangy@github.io
-
-4:49 PM
-Claude responded: The username would be catbot-ciangy — GitHub uses whatever comes before .
-The username would be catbot-ciangy — GitHub uses whatever comes before .github.io as the username.
-
-But just a heads up: GitHub usernames can't contain the @ symbol, so catbot-ciangy@github.io wouldn't be a valid repository name. GitHub will likely reject it.
-
-You'd want to name it something like:
-
-catbot-ciangy.github.io ✅
-That would make your site live at: https://catbot-ciangy.github.io
-
-Is catbot-ciangy your actual GitHub username? The repo name needs to match your username exactly for it to work as the main user site.
-
-You said: oh so it needs to be my username for it to work?
-oh so it needs to be my username for it to work?
-
-4:50 PM
-Claude responded: Yes, exactly!
-Yes, exactly! The repo name must match your GitHub username for it to work as your main site at https://yourusername.github.io.
-
-For example:
-
-Username: catbot-ciangy → Repo name: catbot-ciangy.github.io ✅
-Username: catbot-ciangy → Repo name: my-website.github.io ❌ (won't work as the main site)
-If you name it something different, it still works — but the URL will include the repo name as a subfolder:
-
-Repo: my-website → Site at https://catbot-ciangy.github.io/my-website
-So the easiest path is to just make sure your repo name is [your-exact-username].github.io and you're good to go!
-
-You said: but what if i want catbot in the name is that possible
-but what if i want catbot in the name is that possible
-
-4:51 PM
-Claude responded: Yes!
-Yes! You just need to make sure your GitHub username is catbot (or whatever you want), and then the repo name follows automatically.
-
-So you have two options:
-
-Change your GitHub username to catbot (if it's available) → then name the repo catbot.github.io → site is at https://catbot.github.io
-Keep your current username and just name the repo catbot → site is at https://yourusername.github.io/catbot
-To check if a username is available, just go to github.com/catbot — if it shows a 404, it's free!
-
-Would either of those work for you?
-
-You said: so its just gonna be exactly what my username is?
-so its just gonna be exactly what my username is? and theres no other way
-
-4:51 PM
-Claude responded: Pretty much, yes!
-Pretty much, yes! The yourusername.github.io format is the only way to get a clean root URL that matches a custom name.
-
-But there is one other option — a custom domain. If you buy a domain name (like catbot.com) for a few dollars a year from somewhere like Namecheap or GoDaddy, you can connect it to your GitHub Pages site. Then your URL would just be https://catbot.com regardless of what your GitHub username is.
-
-So your options are basically:
-
-Change your GitHub username to catbot → free, instant
-Buy a custom domain like catbot.com → costs ~$10-15/year
-Live with the subfolder URL like yourusername.github.io/catbot → free, no changes needed
-If you just want something clean and free, changing your GitHub username is probably the easiest move!
-
-You said: is that all i have to do to create it
-is that all i have to do to create it
-
-4:57 PM
-Claude responded: For the username change, yes it's simple:
-For the username change, yes it's simple:
-
-Go to GitHub → Settings → Account → "Change username"
-But if you mean creating the whole site, here's the full picture — you still need to:
-
-Create the repo named catbot.github.io
-Upload your site files (your HTML, CSS, etc.)
-Enable GitHub Pages in the repo settings
-Have you already built the site files, or are you starting from scratch on that too?
-
-You said: do i have to initialize the repo or no
-do i have to initialize the repo or no
-
-4:58 PM
-Claude responded: If you're uploading files through the browser, no — you don't need to initialize it.
-If you're uploading files through the browser, no — you don't need to initialize it. GitHub handles that for you when you upload files.
-
-If you're using Git on the command line, then yes — you'd run git init to initialize it locally before pushing.
-
-So it depends on how you're planning to upload your files. Which way were you thinking?
-
-You said: ok yhen i uploaded via browser now what
-ok yhen i uploaded via browser now what
-
-5:01 PM
-Claude responded: Now just enable GitHub Pages!
-Now just enable GitHub Pages! Here's how:
-
-Go to your repo on GitHub
-Click Settings (top menu)
-Click Pages in the left sidebar
-Under "Source", select main (or master) branch and click Save
-That's it! After a minute or two your site will be live at https://yourusername.github.io 🎉
-
-Did it give you any errors when uploading, or did everything go through okay?
-
-You said: idk i cant tell this is what i see
-Screenshot 2026-05-07 at 5.03.13 PM.png
-idk i cant tell this is what i see
-
-5:03 PM
-Claude responded: You're actually all set!
-You're actually all set! 🎉
-
-Looking at your screenshot, I can see:
-
-It's already set to "Deploy from a branch"
-Branch is set to main with / (root)
-That means GitHub Pages is already configured and running! Your site should be live at:
-
-https://cianna-grama.github.io/ciangy.github.io
-
-Just wait a minute or two if you just set it up, then try visiting that URL. Does it load your site?
-
-You said: how to fix this problem?
-Screenshot 2026-05-07 at 8.09.42 PM.png
-how to fix this problem?
-
-8:09 PM
-Claude responded: The error says it can't find an index.
-The error says it can't find an index.html file. This is the most common issue! Here's what's likely happening:
-
-The problem: Your main HTML file probably isn't named index.html, or it's inside a subfolder in your repo.
-
-How to fix it:
-
-Go to your repo on GitHub (github.com/cianna-grama/ciangy.github.io)
-Look at the files listed there — what is your main HTML file named?
-It needs to be named exactly index.html and be in the root (main folder) of the repo, not inside any subfolders.
-
-If it's named something else (like home.html or catbot.html):
-
-Click on the file in GitHub
-Click the pencil icon to edit
-Click the filename at the top and rename it to index.html
-Scroll down and click Commit changes
-What files do you see in your repo right now?
-
-You said: here is my code for my site currently.
-
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Robot Project</title> <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&display=swap" rel
-
-pasted
-
-here is my code for my site currently. i want to make some changes and you'll help me. first, i want the development stages to have room for a picture that is bigger. the pic will be on the left and then on the right will be room for me to write about the details of each picture. then also add a section that says like final product in the saem style as the other sections
-
-8:26 PM
-Claude responded: Here's the updated code with wider photo cards (image on left, text on right) and a new "Final Product" section: Here's what changed:
-Here's the updated code with wider photo cards (image on left, text on right) and a new "Final Product" section:
-
-
-Created a file, read a file
-Created a file, read a file
-Here's what changed:
-
-Development Stages — each stage is now a wide horizontal card with the image taking up the left 55% and a text area on the right where you can write details about each photo.
-
-Final Product — new section at the bottom in the same style as the rest of the page, with a 3-card grid (Front View, Side View, In Action) — feel free to rename those however you want.
-
-To add your actual photos, replace the <div class="photo-left"> placeholder block with:
-
-html
-<img src="your-photo.jpg" alt="Stage 1">
-Want me to tweak anything else?
-
-
-Index
-Code · HTML 
-You said: lets make some cahnges to this.
-lets make some cahnges to this. for the in action part of the final robot make it the size of both the front and side view blocks put together so its big. it will be a video. the front and side view blocks should both fit on one line with no room for anything else and the in action willgo right below. also remove the green dot thing on the front page at the top
-
-8:30 PM
-Claude responded: Now update the HTML for the final grid — replace the 3-card grid with 2 photo cards + full-width video card: Here's what changed:
-
-Edited 3 files, viewed 2 files
-Edited 3 files, viewed 2 files
-Now update the HTML for the final grid — replace the 3-card grid with 2 photo cards + full-width video card:
-
-
-Edited a file, read a file
-Edited a file, read a file
-Here's what changed:
-
-Front View + Side View sit side by side on one row, equal width
-In Action spans the full width below them as a 16:9 video block — replace the placeholder with <video src="your-video.mp4" controls></video> when you're ready
-Green dot on the hero is gone
-What else would you like to change?
-
-
-Index
-Code · HTML 
-
-
-
-
-
-Claude is AI and can make mistakes. Please double-check responses.
-Index · HTML
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -258,7 +7,7 @@ Copy
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
     :root {
       --bg: #0f0f11;
       --surface: #1a1a1f;
@@ -267,7 +16,7 @@ Copy
       --muted: #888;
       --border: #2a2a30;
     }
- 
+
     body {
       background: var(--bg);
       color: var(--text);
@@ -275,7 +24,7 @@ Copy
       font-weight: 300;
       line-height: 1.7;
     }
- 
+
     /* HERO */
     header {
       min-height: 100vh;
@@ -287,9 +36,9 @@ Copy
       position: relative;
       overflow: hidden;
     }
- 
- 
- 
+
+
+
     .tag {
       font-family: 'Space Mono', monospace;
       font-size: 0.75rem;
@@ -298,7 +47,7 @@ Copy
       text-transform: uppercase;
       margin-bottom: 24px;
     }
- 
+
     h1 {
       font-family: 'Space Mono', monospace;
       font-size: clamp(2.5rem, 8vw, 6rem);
@@ -308,18 +57,18 @@ Copy
       margin-bottom: 32px;
       max-width: 800px;
     }
- 
+
     h1 span {
       color: var(--accent);
     }
- 
+
     .members-row {
       display: flex;
       gap: 24px;
       flex-wrap: wrap;
       margin-top: 16px;
     }
- 
+
     .member-chip {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -328,7 +77,7 @@ Copy
       font-size: 0.9rem;
       color: var(--muted);
     }
- 
+
     /* DESCRIPTION */
     .section {
       padding: 80px 60px;
@@ -336,7 +85,7 @@ Copy
       max-width: 1100px;
       margin: 0 auto;
     }
- 
+
     .section-label {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
@@ -345,14 +94,14 @@ Copy
       color: var(--accent);
       margin-bottom: 20px;
     }
- 
+
     .description-text {
       font-size: 1.2rem;
       line-height: 1.9;
       color: #ccc;
       max-width: 780px;
     }
- 
+
     /* PHOTOS */
     .photos-section {
       padding: 80px 60px;
@@ -360,7 +109,7 @@ Copy
       margin: 0 auto;
       border-bottom: 1px solid var(--border);
     }
- 
+
     .photo-card {
       display: flex;
       background: var(--surface);
@@ -370,7 +119,7 @@ Copy
       margin-top: 32px;
       min-height: 280px;
     }
- 
+
     .photo-left {
       flex: 0 0 55%;
       background: #222228;
@@ -382,24 +131,24 @@ Copy
       color: var(--muted);
       border-right: 1px solid var(--border);
     }
- 
+
     .photo-left img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
- 
+
     .photo-left svg {
       opacity: 0.3;
     }
- 
+
     .photo-left span {
       font-size: 0.8rem;
       font-family: 'Space Mono', monospace;
       letter-spacing: 0.05em;
     }
- 
+
     .photo-right {
       flex: 1;
       padding: 32px 36px;
@@ -407,7 +156,7 @@ Copy
       flex-direction: column;
       justify-content: center;
     }
- 
+
     .photo-right strong {
       display: block;
       font-family: 'Space Mono', monospace;
@@ -417,13 +166,13 @@ Copy
       margin-bottom: 12px;
       letter-spacing: 0.02em;
     }
- 
+
     .photo-right p {
       font-size: 1rem;
       color: #bbb;
       line-height: 1.8;
     }
- 
+
     /* FINAL PRODUCT SECTION */
     .final-section {
       padding: 80px 60px;
@@ -431,14 +180,14 @@ Copy
       margin: 0 auto;
       border-bottom: 1px solid var(--border);
     }
- 
+
     .final-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
       margin-top: 40px;
     }
- 
+
     .final-card-video {
       grid-column: 1 / -1;
       background: var(--surface);
@@ -446,7 +195,7 @@ Copy
       border-radius: 4px;
       overflow: hidden;
     }
- 
+
     .final-video-placeholder {
       width: 100%;
       aspect-ratio: 16/9;
@@ -459,22 +208,22 @@ Copy
       color: var(--muted);
       border-bottom: 1px solid var(--border);
     }
- 
+
     .final-video-placeholder svg { opacity: 0.3; }
- 
+
     .final-video-placeholder span {
       font-size: 0.8rem;
       font-family: 'Space Mono', monospace;
       letter-spacing: 0.05em;
     }
- 
+
     .final-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 4px;
       overflow: hidden;
     }
- 
+
     .final-placeholder {
       width: 100%;
       aspect-ratio: 4/3;
@@ -487,33 +236,33 @@ Copy
       color: var(--muted);
       border-bottom: 1px solid var(--border);
     }
- 
+
     .final-placeholder svg {
       opacity: 0.3;
     }
- 
+
     .final-placeholder span {
       font-size: 0.8rem;
       font-family: 'Space Mono', monospace;
       letter-spacing: 0.05em;
     }
- 
+
     .final-caption {
       padding: 16px 20px;
     }
- 
+
     .final-caption strong {
       display: block;
       font-weight: 600;
       font-size: 0.95rem;
       margin-bottom: 4px;
     }
- 
+
     .final-caption p {
       font-size: 0.85rem;
       color: var(--muted);
     }
- 
+
     /* FOOTER */
     footer {
       padding: 40px 60px;
@@ -523,7 +272,7 @@ Copy
       font-size: 0.75rem;
       color: var(--muted);
     }
- 
+
     @media (max-width: 700px) {
       header, .section, .photos-section, .final-section { padding: 60px 24px; }
       .photo-card { flex-direction: column; }
@@ -532,7 +281,7 @@ Copy
   </style>
 </head>
 <body>
- 
+
   <!-- HERO -->
   <header>
     <div class="tag">Robotics Project — 2026</div>
@@ -545,7 +294,7 @@ Copy
       <div class="member-chip">Professor Parker</div>
     </div>
   </header>
- 
+
   <!-- DESCRIPTION -->
   <div class="section">
     <div class="section-label">Project Overview</div>
@@ -558,11 +307,11 @@ Copy
       more dynamic motion patterns.
     </p>
   </div>
- 
+
   <!-- DEVELOPMENT STAGES -->
   <div class="photos-section">
     <div class="section-label">Development Stages</div>
- 
+
     <!-- Stage 1 -->
     <div class="photo-card">
       <div class="photo-left">
@@ -578,7 +327,7 @@ Copy
         <p>Write about your planning process here. What did you sketch out? What were your initial ideas and goals for the robot design?</p>
       </div>
     </div>
- 
+
     <!-- Stage 2 -->
     <div class="photo-card">
       <div class="photo-left">
@@ -593,7 +342,7 @@ Copy
         <p>Describe the frame construction here. What materials did you use? What challenges did you run into when building the chassis?</p>
       </div>
     </div>
- 
+
     <!-- Stage 3 -->
     <div class="photo-card">
       <div class="photo-left">
@@ -608,7 +357,7 @@ Copy
         <p>Detail the electronics setup here. How did you wire the servo motors? What controller are you using and how did you configure it?</p>
       </div>
     </div>
- 
+
     <!-- Stage 4 -->
     <div class="photo-card">
       <div class="photo-left">
@@ -623,15 +372,15 @@ Copy
         <p>Write about your testing process here. What worked, what didn't? What adjustments did you make along the way?</p>
       </div>
     </div>
- 
+
   </div>
- 
+
   <!-- FINAL PRODUCT -->
   <div class="final-section">
     <div class="section-label">Final Product</div>
- 
+
     <div class="final-grid">
- 
+
       <!-- Front View -->
       <div class="final-card">
         <div class="final-placeholder">
@@ -646,7 +395,7 @@ Copy
           <p>caption here</p>
         </div>
       </div>
- 
+
       <!-- Side View -->
       <div class="final-card">
         <div class="final-placeholder">
@@ -661,7 +410,7 @@ Copy
           <p>caption here</p>
         </div>
       </div>
- 
+
       <!-- In Action — full width video -->
       <div class="final-card-video">
         <div class="final-video-placeholder">
@@ -677,17 +426,13 @@ Copy
           <p>caption here</p>
         </div>
       </div>
- 
+
     </div>
   </div>
- 
+
   <footer>
     &copy; 2026 — Cianna Grama
   </footer>
- 
+
 </body>
 </html>
- 
-
-
-1Password menu is available. Press down arrow to select.
